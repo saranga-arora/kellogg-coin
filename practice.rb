@@ -27,3 +27,25 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+accounts = [
+  { user: "ben", balance: 0 },
+  { user: "evan", balance: 0 },
+  { user: "brian", balance: 0 },
+  { user: "anthony", balance: 0 }
+]
+
+for transaction in blockchain
+  for person in accounts[:user]
+    if  person = from_user
+      accounts[:balance] = accounts[:balance] - blockchain[:amount]
+
+    if person = to_user 
+      accounts[:balance] = accounts[:balance] + blockchain[:amount]
+    end
+  end
+
+  for person in accounts[:user]
+    #write out the sentence
+
+
+
