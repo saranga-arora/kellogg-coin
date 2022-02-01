@@ -27,25 +27,33 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
-accounts = [
+accounts =  
+[
   { user: "ben", balance: 0 },
   { user: "evan", balance: 0 },
   { user: "brian", balance: 0 },
   { user: "anthony", balance: 0 }
 ]
 
+puts "#{accounts[1][:user]}"
+
 for transaction in blockchain
-  for person in accounts[:user]
-    if  person = from_user
-      accounts[:balance] = accounts[:balance] - blockchain[:amount]
+  for account in accounts
 
-    if person = to_user 
-      accounts[:balance] = accounts[:balance] + blockchain[:amount]
+    if account[:user] == transaction[:from_user]
+      account[:balance] = account[:balance] - transaction[:amount]
+    end 
+    
+    if account[:user] == transaction[:to_user] 
+      account[:balance] = account[:balance] + transaction[:amount]
     end
-  end
 
-  for person in accounts[:user]
-    #write out the sentence
+  end
+end
+
+for account in accounts
+  puts "#{account[:user].capitalize}'s KelloggCoin balance is #{account[:balance]}."
+end 
 
 
 
