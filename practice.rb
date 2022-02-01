@@ -53,7 +53,4 @@ end
 
 for account in accounts
   puts "#{account[:user].capitalize}'s KelloggCoin balance is #{account[:balance]}."
-end 
-
-
-
+end
